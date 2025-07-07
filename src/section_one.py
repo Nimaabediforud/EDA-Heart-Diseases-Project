@@ -10,7 +10,7 @@ SECTION ONE
 """
 
 # Load the Dataframe
-df = pd.read_csv("data")
+df = pd.read_csv("data/heart-data.csv")
 
 # Count the number of cardiovascular patients
 filterd = df[df["HeartDisease"] == 1]
