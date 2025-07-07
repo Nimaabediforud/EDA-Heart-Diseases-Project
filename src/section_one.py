@@ -17,11 +17,11 @@ filterd = df[df["HeartDisease"] == 1]
 sex_counts = filterd["Sex"].value_counts()
 male = sex_counts.get("M", 0)
 female = sex_counts.get("F", 0)
-total = male + female
+total = np.add(male, female)
 
 # Calculate the precentages of cardiovascular patients
-Mpct, Fpct = (male * 100 / total), (female * 100 / total)
-total_precentage = total * 100 / df["Sex"].count()
+Mpct, Fpct = (np.divide(np.multiply(male, 100), total)), (np.divide(np.multiply(female, 100), total))
+total_precentage = np.divide(np.multiply(total, 100), df["Sex"].count())
 
 # make the new Dataframe for number of cardiovascular patients
 df_of_patients_num = pd.DataFrame({"Sex": ["M", "F"],
@@ -77,7 +77,7 @@ def barChart1(ax, title, labels):
 def barChart2(ax, title, labels):
     # Set plot2
     x = ["Healthy Population", "Total Patients", "Total population"]
-    y = [(df["Sex"].count() - df_of_patients_num.iloc[0, 2]),
+    y = [np.subtract(df["Sex"].count(), df_of_patients_num.iloc[0, 2]),
         df_of_patients_num.iloc[0, 2],
         df["Sex"].count()]
     ax.bar(x, y, color=["orchid", "turquoise", "yellow"], edgecolor="black")
@@ -124,7 +124,7 @@ def pieChart1(ax, title):
 #Pie chart2, Show the percentage of cardiovascular patients out of all population
 def pieChart2(ax, title):
     wedges2, texts2, autotexts2 = ax.pie([df_of_patients_num["Total"][0],
-                                (df.shape[0] - df_of_patients_num["Total"][0])],
+                                np.subtract(df.shape[0], df_of_patients_num["Total"][0])],
                             labels=["Healthy Population", "Cardiovascular Patients"],
                         autopct="%1.1f%%", colors=["steelblue", "lightgray"])
     for w2 in wedges2:
