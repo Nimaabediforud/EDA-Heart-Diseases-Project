@@ -13,7 +13,7 @@ SECTION THIRD
 """
 
 # Load the Dataframe
-df = pd.read_csv("../data/heart-data.csv")
+df = pd.read_csv("data/heart-data.csv")
 
 """
 Customize some properties of visualizations
