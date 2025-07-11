@@ -7,13 +7,13 @@ from matplotlib.gridspec import GridSpec
 
 
 """ 
-Classify cardiovascular patients and non-patient individuals
+Classify cardiovascular patients and non-patient 
 bsade on chest pain type,
-SECTION THIRD
+SECTION THREE
 """
 
 # Load the Dataframe
-df = pd.read_csv("../data/heart-data.csv")
+df = pd.read_csv("data/heart-data.csv")
 
 """
 Customize some properties of visualizations
@@ -37,7 +37,7 @@ non_patient_counts = list(non_patients)
 
 """
 Create the visualizations, 
-SECTION THIRD
+SECTION THREE
 """
 
 
