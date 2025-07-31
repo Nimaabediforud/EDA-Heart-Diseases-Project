@@ -1,5 +1,10 @@
 # EDA Heart Diseases Project 🫀💻
 
+<p align="center">
+  <img src="data/Cure-for-cardiovascular-diseases-1200x675.jpg" width="500"/>
+</p>
+
+
 This project analyzes the [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) to explore cardiovascular risk patterns based on clinical features. Cardiovascular diseases (CVDs) are the leading cause of death globally, responsible for 17.9 million deaths annually. Early detection through data-driven methods is crucial to manage risk and save lives.
 
 Using 11 clinical attributes (such as age, blood pressure, cholesterol, chest pain type, ECG results, and more), this project identifies trends, visualizes relationships, and prepares the ground for further classification and predictive modeling.
