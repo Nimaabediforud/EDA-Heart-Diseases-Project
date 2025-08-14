@@ -117,6 +117,7 @@ Each factor is stored in its own DataFrame:
 - `fasting_bs_data_df`
 
 > ✅ These tables can easily be saved as CSVs for reporting purposes.
+...
 
 ### 📊 Visualizations
 This section is under development. Visualizations for these measurements will be included in the upcoming update.
